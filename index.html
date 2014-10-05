@@ -17,13 +17,13 @@
 
 		</script>	
 		            
-		<title>Wow, you must be rich!</title>
+		<title id='top-title'>Wow, you must be rich!</title>
+		<!-- People are going to want to share this on FB, I promise -->
 		<meta property="og:title" content="Wow, you must be rich!">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://vivid-heat-6539.firebaseapp.com">
 		<meta property="og:image" content="https://vivid-heat-6539.firebaseapp.com/wow.jpg">
 		<meta property="og:site_name" content="Wow, you must be rich">
-
 
 		<fb:like href="http://developers.facebook.com/" width="450" height="80">
 
@@ -34,9 +34,21 @@
 
 	<body>
 
-		<h1>Wow, You Must Be Rich!</h1>
+		<h1 id='input'>Wow, You Must Be Rich!</h1>
 
 		<iframe id="jason-hervys-finest-moment" width="560" height="315" src="//www.youtube.com/embed/U2a2aVlRoSM?loop=1&autoplay=1&playlist=U2a2aVlRoSM" frameborder="0" allowfullscreen></iframe>
+
+		<h1 id='bottom-title'></h1>
+
+		<script>
+
+			var input = decodeURIComponent(window.location.hash);
+			if (input.length > 1){
+				document.getElementById('input').innerHTML = input.slice(1);
+				document.getElementById('bottom-title').innerHTML = "Wow, You Must Be Rich!";
+			}
+
+		</script>
 
 	</body>
 
